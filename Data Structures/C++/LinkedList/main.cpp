@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+	cout << "Linked List" << endl;
 	LinkedList<int> list;
 	list.insert(1);
 	list.insert(3);

@@ -3,6 +3,7 @@
 using namespace std;
 
 int main() {
+	cout << "Doubly Linked List" << endl;
 	DoublyLinkedList<int> list;
 	list.insert(12);
 	list.insert(13);

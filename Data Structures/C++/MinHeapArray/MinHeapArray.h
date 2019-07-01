@@ -1,8 +1,9 @@
 #pragma once
+#pragma once
 #include <vector>
 
 template <class T>
-class MaxHeap {
+class MinHeap {
 public:
 	std::vector<T> data;
 
@@ -17,7 +18,7 @@ public:
 		int value = data[i];
 		int parentIndex = parentIndexOf(i);
 
-		while (parentIndex >= 0 && value > data[parentIndex]) {
+		while (parentIndex >= 0 && value < data[parentIndex]) {
 			// swap the parent and the current nodes until the max heap is satisfied
 			data[i] = data[parentIndex];
 			data[parentIndex] = value;
@@ -26,27 +27,27 @@ public:
 		}
 	}
 
-	// Used when removing the root (max) node for example, the node swaps downwards if applicable
+	// Used when removing the root (min) node for example, the node swaps downwards if applicable
 	void heapifyDown(int i) {
 		int size = data.size();
-		int largestIndex = i;
+		int smallestIndex = i;
 		int value = data[i];
 		do {
-			if (largestIndex != i) {
-				data[i] = data[largestIndex];
-				data[largestIndex] = value;
-				i = largestIndex;
+			if (smallestIndex != i) {
+				data[i] = data[smallestIndex];
+				data[smallestIndex] = value;
+				i = smallestIndex;
 			}
 			int leftChildIndex = leftChildIndexOf(i);
-			if (leftChildIndex < size && data[leftChildIndex] > data[i]) largestIndex = leftChildIndex;
+			if (leftChildIndex < size && data[leftChildIndex] < data[i]) smallestIndex = leftChildIndex;
 
 			int rightChildIndex = rightChildIndexOf(i);
-			if (rightChildIndex < size && data[rightChildIndex] > data[i]) largestIndex = rightChildIndex;
-		} while (largestIndex != i);
+			if (rightChildIndex < size && data[rightChildIndex] < data[i]) smallestIndex = rightChildIndex;
+		} while (smallestIndex != i);
 
 	}
 
-	void removeMax() {
+	void removeMin() {
 		if (data.size() == 0) return;
 
 		data.erase(data.begin());

@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaxHeapArray", "MaxHeapArray\MaxHeapArray.vcxproj", "{5C1174CD-4106-4A2B-9B10-D8774FDCC6FE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MinHeapArray", "MinHeapArray\MinHeapArray.vcxproj", "{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{5C1174CD-4106-4A2B-9B10-D8774FDCC6FE}.Release|x64.Build.0 = Release|x64
 		{5C1174CD-4106-4A2B-9B10-D8774FDCC6FE}.Release|x86.ActiveCfg = Release|Win32
 		{5C1174CD-4106-4A2B-9B10-D8774FDCC6FE}.Release|x86.Build.0 = Release|Win32
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Debug|x64.ActiveCfg = Debug|x64
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Debug|x64.Build.0 = Debug|x64
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Debug|x86.ActiveCfg = Debug|Win32
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Debug|x86.Build.0 = Debug|Win32
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Release|x64.ActiveCfg = Release|x64
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Release|x64.Build.0 = Release|x64
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Release|x86.ActiveCfg = Release|Win32
+		{94A9C079-AB6C-4C8C-8A7D-20B7195C24BA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
