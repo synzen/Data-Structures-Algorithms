@@ -1,73 +1,78 @@
-#include <iostream>
-using namespace std;
+#pragma once
 
 template <class T>
-class Node {
+class DoublyLinkedList {
+public:
+	class Node {
 	public:
-	T data;
-	Node<T>* next = NULL;
+		T data;
+		Node* next = NULL;
+		Node* prev = NULL;
 
-	Node(T d) {
-		data = d;
-	}
-};
-
-template <class T>
-class LinkedList {
-	public:
-	Node<T>* head = NULL;
-
-	void insert(T data) {
-		if (!head) {
-			head = new Node<T>(data);
-			return;
-		}
-
-		Node<T>* cursor = head;
-		while (cursor->next) {
-			cursor = cursor->next;
-		}
-		cursor->next = new Node<T>(data);		
+		Node(T d) { data = d; }
 	};
+	Node* head = NULL;
 
 	void print() {
-		Node<T>* cursor = head;
+		Node* cursor = head;
 		while (cursor != NULL) {
-			cout << cursor->data << endl;
+			std::cout << cursor->data << std::endl;
 			cursor = cursor->next;
 		}
 		free(cursor);
 		cursor = NULL;
-	}
+	};
 
+	void insert(T data) {
+		if (!head) {
+			head = new Node(data);
+			return;
+		}
+
+		Node* cursor = head;
+		while (cursor->next) {
+			cursor = cursor->next;
+		}
+		Node* newNode = new Node(data);
+		cursor->next = newNode;
+		newNode->prev = cursor;
+	};
+	
 	void reverse() {
 		if (!head) return;
-		Node<T>* prev = NULL;
-		Node<T>* current = head;
-		Node<T>* next = NULL;
+		Node* prev = NULL;
+		Node* current = head;
+		Node* next = NULL;
 		while (current) {
 			next = current->next;
 			current->next = prev;
+			current->prev = next;
 			prev = current;
 			current = next;
 		}
 		head = prev;
-	}
+	};
 
 	void removeWhere(bool(*f)(T)) {
 		if (!head) return;
-		Node<T>* prev = NULL;
-		Node<T>* current = head;
+		Node* prev = NULL;
+		Node* current = head;
 		while (current) {
 			if ((*f)(current->data)) {
 				if (!prev) {
 					// if prev is null, then we're working with the head
 					head = current->next;
+					free(head->prev);
+					head->prev = NULL;
 					current = head;
 				}
 				else {
 					prev->next = current->next;
-					current = current->next;
+					if (current->next) {
+						current->next->prev = prev;
+					}
+					free(current);
+					current = prev->next;
 				}
 			}
 			else {
@@ -75,14 +80,13 @@ class LinkedList {
 				prev = current;
 				current = current->next;
 			}
-			
 		}
-	}
+	};
 
 	void clear() {
 		if (!head) return;
-		Node<T>* prev = NULL;
-		Node<T>* current = head;
+		Node* prev = NULL;
+		Node* current = head;
 		while (current) {
 			prev = current;
 			current = current->next;
@@ -90,11 +94,5 @@ class LinkedList {
 			prev = NULL;
 		}
 		head = NULL;
-	}
+	};
 };
-
-int main()
-{
-	return 0;
-}
-

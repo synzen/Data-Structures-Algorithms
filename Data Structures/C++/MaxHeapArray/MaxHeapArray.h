@@ -1,16 +1,11 @@
-#include <iostream>
+#pragma once
 #include <vector>
-using namespace std;
-
-// arr[(i-1)/2] = parent node
-// arr[(2*i)+1] = left child
-// arr[(2*i)+2] = right child
 
 template <class T>
 class MaxHeap {
 public:
-	vector<T> data;
-	
+	std::vector<T> data;
+
 	void insert(T d) {
 		data.push_back(d);
 		int size = data.size();
@@ -47,7 +42,7 @@ public:
 			int rightChildIndex = rightChildIndexOf(i);
 			if (rightChildIndex < size && data[rightChildIndex] > data[i]) largestIndex = rightChildIndex;
 		} while (largestIndex != i);
-		
+
 	}
 
 	void removeMax() {
@@ -56,15 +51,15 @@ public:
 		data.erase(data.begin());
 		data.insert(data.begin(), data[data.size() - 1]);
 		data.erase(data.end() - 1);
-		
+
 		heapifyDown(0);
 	}
 
 	void print() {
 		for (auto i = data.begin(); i != data.end(); ++i) {
-			cout << *i << " ";
+			std::cout << *i << " ";
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 
 	int parentIndexOf(int index) {
@@ -78,11 +73,5 @@ public:
 	int rightChildIndexOf(int index) {
 		return (index * 2) + 2;
 	}
-	
+
 };
-
-
-int main()
-{
-	return 0;
-}
