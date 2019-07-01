@@ -8,7 +8,7 @@ public:
 		T data;
 		Node* next = NULL;
 
-		Node(T d) { data = d; }
+		Node(T d) : data(d) {}
 	};
 	Node* head = NULL;
 

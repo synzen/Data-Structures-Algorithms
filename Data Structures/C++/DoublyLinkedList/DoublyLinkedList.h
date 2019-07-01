@@ -9,7 +9,7 @@ public:
 		Node* next = NULL;
 		Node* prev = NULL;
 
-		Node(T d) { data = d; }
+		Node(T d) : data(d) {}
 	};
 	Node* head = NULL;
 
