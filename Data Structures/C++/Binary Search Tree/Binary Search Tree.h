@@ -69,6 +69,23 @@ public:
 		return root;
 	}
 
+	Node* min() {
+		if (!root) return NULL;
+		Node* current = root;
+		while (current->left) {
+			current = current->left;
+		}
+		return current;
+	}
+	
+	Node* max() {
+		if (!root) return NULL;
+		Node* current = root;
+		while (current->right) {
+			current = current->right;
+		}
+		return current;
+	}
 
 	void remove(T value) {
 		Node* parent = NULL;

@@ -7,6 +7,7 @@ For academic purposes.
 * [Max Heap (with Array)](https://github.com/synzen/Data-Structures-Algorithms#max-heap-with-array)
 * Min Heap (with Array)
 * Binary Search Tree (with Array)
+* B-tree
 * Red Black Tree
 
 ## Algorithms
