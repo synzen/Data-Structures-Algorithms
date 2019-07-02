@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Binary Search Tree.h">
+    <ClInclude Include="BinarySearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

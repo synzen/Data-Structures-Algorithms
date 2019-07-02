@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Binary Search Tree.h"
+#include "BinarySearchTree.h"
 using namespace std;
 
 int main()
