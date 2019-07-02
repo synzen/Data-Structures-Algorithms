@@ -1,33 +1,11 @@
+// c++.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
 #include <iostream>
-#include "RedBlackTree.h"
-using namespace std;
 
 int main()
 {
-	cout << "Red Black Tree" << endl;
-	//RedBlackTree<int> tree;
-	//tree.insert(10);
-	//tree.insert(20);
-	//// tree.insert(30);
-	//// tree.insert(15);
-	//tree.printInorder(tree.root);
-	//cout << endl;
-	RedBlackTree<int> tree2;
-	tree2.insert(10);
-	tree2.insert(20);
-	tree2.insert(30);
-	tree2.insert(15);
-	tree2.insert(100);
-	tree2.insert(75);
-	tree2.insert(90);
-	tree2.insert(1);
-	tree2.insert(2);
-	//cout << endl << endl;
-	//cout << tree2.root->right->data << endl;
-	//tree2.insert(12);
-
-	tree2.printInorder(tree2.root);
-    
+    std::cout << "Hello World!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
