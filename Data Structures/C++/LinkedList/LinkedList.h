@@ -16,7 +16,7 @@ public:
 	void print() {
 		Node* cursor = head;
 		while (cursor != NULL) {
-			cout << cursor->data << endl;
+			std::cout << cursor->data << std::endl;
 			cursor = cursor->next;
 		}
 		free(cursor);
