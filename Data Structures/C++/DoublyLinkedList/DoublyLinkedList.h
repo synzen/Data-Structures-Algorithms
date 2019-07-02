@@ -6,21 +6,21 @@ public:
 	class Node {
 	public:
 		T data;
-		Node* next = NULL;
-		Node* prev = NULL;
+		Node* next = 0;
+		Node* prev = 0;
 
 		Node(T d) : data(d) {}
 	};
-	Node* head = NULL;
+	Node* head = 0;
 
 	void print() {
 		Node* cursor = head;
-		while (cursor != NULL) {
+		while (cursor != 0) {
 			std::cout << cursor->data << std::endl;
 			cursor = cursor->next;
 		}
 		free(cursor);
-		cursor = NULL;
+		cursor = 0;
 	};
 
 	void insert(T data) {
@@ -40,9 +40,9 @@ public:
 	
 	void reverse() {
 		if (!head) return;
-		Node* prev = NULL;
+		Node* prev = 0;
 		Node* current = head;
-		Node* next = NULL;
+		Node* next = 0;
 		while (current) {
 			next = current->next;
 			current->next = prev;
@@ -55,15 +55,15 @@ public:
 
 	void removeWhere(bool(*f)(T)) {
 		if (!head) return;
-		Node* prev = NULL;
+		Node* prev = 0;
 		Node* current = head;
 		while (current) {
 			if ((*f)(current->data)) {
 				if (!prev) {
-					// if prev is null, then we're working with the head
+					// if prev is 0, then we're working with the head
 					head = current->next;
 					free(head->prev);
-					head->prev = NULL;
+					head->prev = 0;
 					current = head;
 				}
 				else {
@@ -85,14 +85,14 @@ public:
 
 	void clear() {
 		if (!head) return;
-		Node* prev = NULL;
+		Node* prev = 0;
 		Node* current = head;
 		while (current) {
 			prev = current;
 			current = current->next;
 			free(prev);
-			prev = NULL;
+			prev = 0;
 		}
-		head = NULL;
+		head = 0;
 	};
 };

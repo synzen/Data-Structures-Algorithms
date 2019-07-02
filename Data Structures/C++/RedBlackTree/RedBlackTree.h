@@ -7,7 +7,7 @@
 
 3) There are no two adjacent red nodes (A red node cannot have a red parent or red child).
 
-4) Every path from a node (including root) to any of its descendant NULL node has the same number of black nodes.
+4) Every path from a node (including root) to any of its descendant 0 node has the same number of black nodes.
 */
 
 template <class T>
@@ -18,8 +18,8 @@ public:
 		bool red = false;
 	public:
 		T data;
-		Node* left = NULL;
-		Node* right = NULL;
+		Node* left = 0;
+		Node* right = 0;
 
 		Node(T d, bool r = false) : data(d), red(r) {}
 		bool isRed() { return red; }
@@ -27,7 +27,7 @@ public:
 		void setRed() { red = true; }
 		void setBlack() { red = false; }
 	};
-	Node* root = NULL;
+	Node* root = 0;
 
 	Node* rotateNodeLeft(Node* node) {
 		Node* newRoot = node->right;
@@ -52,9 +52,9 @@ public:
 			return;
 		}
 		std::vector<Node*> grandparents;
-		Node* grandparent = NULL;
-		Node* parent = NULL;
-		Node* uncle = NULL;
+		Node* grandparent = 0;
+		Node* parent = 0;
+		Node* uncle = 0;
 		Node* me = root;
 
 		// First insert normally as you would for a BST
@@ -106,7 +106,7 @@ public:
 		if (parent == root || (parent && parent->isBlack())) return;
 
 		int grandparentsSize = grandparents.size();
-		if (uncle && uncle->isRed()) { // The uncle may be NULL - in that case, NULL = black. Go to the else block below.
+		if (uncle && uncle->isRed()) { // The uncle may be 0 - in that case, 0 = black. Go to the else block below.
 			int currentGrandparentIndex = grandparentsSize - 1; // this is equal to the above grandparent variable
 			Node* currentGrandparent = grandparents[currentGrandparentIndex];
 			while (currentGrandparentIndex >= 0) {
@@ -146,9 +146,7 @@ public:
 					Node* grandparentReplacement = rotateNodeLeft(grandparent);
 					if (grandgrandparent) {
 						if (grandgrandparent->left == grandparent) grandgrandparent->left = grandparentReplacement;
-						else {
-							grandgrandparent->right = grandparentReplacement;
-						}
+						else grandgrandparent->right = grandparentReplacement;
 					}
 					grandparent->setRed();
 					parent->setBlack();
@@ -171,7 +169,7 @@ public:
 	/* Given a binary tree, print its nodes in inorder*/
 	void printInorder(Node* node)
 	{
-		if (node == NULL)
+		if (node == 0)
 			return;
 
 		/* first recur on left child */

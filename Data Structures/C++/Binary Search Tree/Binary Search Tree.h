@@ -8,12 +8,12 @@ public:
 	class Node {
 	public:
 		T data;
-		Node* left = NULL;
-		Node* right = NULL;
+		Node* left = 0;
+		Node* right = 0;
 
 		Node(T d) : data(d) {}
 	};
-	Node* root = NULL;
+	Node* root = 0;
 
 	void insert(T data) {
 		if (!root) {
@@ -51,7 +51,7 @@ public:
 	}
 
 	Node* removeRoot(Node* root) {
-		if (!root->left && !root->right) return NULL;
+		if (!root->left && !root->right) return 0;
 		if (!root->left) return root->right;
 		if (!root->right) return root->left;
 		Node* parent = root;
@@ -70,7 +70,7 @@ public:
 	}
 
 	Node* min() {
-		if (!root) return NULL;
+		if (!root) return 0;
 		Node* current = root;
 		while (current->left) {
 			current = current->left;
@@ -79,7 +79,7 @@ public:
 	}
 	
 	Node* max() {
-		if (!root) return NULL;
+		if (!root) return 0;
 		Node* current = root;
 		while (current->right) {
 			current = current->right;
@@ -88,7 +88,7 @@ public:
 	}
 
 	void remove(T value) {
-		Node* parent = NULL;
+		Node* parent = 0;
 		Node* cur = root;
 		while (cur) {
 			if (value < cur->data) {
