@@ -153,10 +153,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\algorithms\c++\bubbleSort.cpp" />
+    <ClCompile Include="..\..\algorithms\c++\insertionSort.cpp" />
     <ClCompile Include="c++.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\algorithms\c++\bubbleSort.h" />
+    <ClInclude Include="..\..\algorithms\c++\insertionSort.h" />
     <ClInclude Include="..\..\data structures\c++\BinarySearchTree.h" />
     <ClInclude Include="..\..\data structures\c++\DoublyLinkedList.h" />
     <ClInclude Include="..\..\data structures\c++\LinkedList.h" />
