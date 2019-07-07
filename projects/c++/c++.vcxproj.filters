@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\algorithms\c++\insertionSort.cpp">
       <Filter>Header Files\Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\algorithms\c++\quickSort.cpp">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\data structures\c++\BinarySearchTree.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
     <ClInclude Include="..\..\algorithms\c++\insertionSort.h">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\algorithms\c++\quickSort.h">
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
   </ItemGroup>
