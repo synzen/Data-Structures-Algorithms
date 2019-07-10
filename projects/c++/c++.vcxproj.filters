@@ -39,6 +39,9 @@
     <ClCompile Include="breadthFirstSearch.cpp">
       <Filter>Header Files\Algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\algorithms\c++\binarySearch.cpp">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\data structures\c++\BinarySearchTree.h">
@@ -78,6 +81,9 @@
       <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
     <ClInclude Include="breadthFirstSearch.h">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\algorithms\c++\binarySearch.h">
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
   </ItemGroup>

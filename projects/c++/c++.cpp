@@ -4,6 +4,7 @@
 #include "GraphDirectedList.h"
 #include "depthFirstSearch.h"
 #include "breadthFirstSearch.h"
+#include "binarySearch.h"
 
 using namespace std;
 
@@ -29,4 +30,8 @@ int main()
 	for (auto i : bOrder) {
 		cout << i << " ";
 	}
+
+	int sortedArr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int index = binarySearch(sortedArr, 10, 0);
+	cout << endl << index << endl;
 }

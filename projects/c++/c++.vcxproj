@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\algorithms\c++\binarySearch.cpp" />
     <ClCompile Include="..\..\algorithms\c++\bubbleSort.cpp" />
     <ClCompile Include="..\..\algorithms\c++\insertionSort.cpp" />
     <ClCompile Include="..\..\algorithms\c++\quickSort.cpp" />
@@ -160,6 +161,7 @@
     <ClCompile Include="depthFirstSearch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\algorithms\c++\binarySearch.h" />
     <ClInclude Include="..\..\algorithms\c++\bubbleSort.h" />
     <ClInclude Include="..\..\algorithms\c++\insertionSort.h" />
     <ClInclude Include="..\..\algorithms\c++\quickSort.h" />
