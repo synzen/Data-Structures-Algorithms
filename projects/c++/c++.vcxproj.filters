@@ -24,24 +24,6 @@
     <ClCompile Include="c++.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\algorithms\c++\bubbleSort.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\algorithms\c++\insertionSort.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\algorithms\c++\quickSort.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="depthFirstSearch.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="breadthFirstSearch.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\algorithms\c++\binarySearch.cpp">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\data structures\c++\BinarySearchTree.h">
@@ -74,16 +56,19 @@
     <ClInclude Include="..\..\data structures\c++\GraphDirectedList.h">
       <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
-    <ClInclude Include="depthFirstSearch.h">
-      <Filter>Header Files\Algorithms</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\data structures\c++\Graph.h">
       <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
-    <ClInclude Include="breadthFirstSearch.h">
+    <ClInclude Include="..\..\algorithms\c++\binarySearch.h">
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\algorithms\c++\binarySearch.h">
+    <ClInclude Include="..\..\algorithms\c++\heapSort.h">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\algorithms\c++\breadthFirstSearch.h">
+      <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\algorithms\c++\depthFirstSearch.h">
       <Filter>Header Files\Algorithms</Filter>
     </ClInclude>
   </ItemGroup>

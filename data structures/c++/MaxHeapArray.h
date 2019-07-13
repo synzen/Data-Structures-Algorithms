@@ -1,10 +1,17 @@
 #pragma once
+#include <iostream>
 #include <vector>
 
 template <class T>
 class MaxHeap {
 public:
 	std::vector<T> data;
+
+	MaxHeap<T>(T arr[], int len) {
+		for (int i = 0; i < len; ++i) {
+			data.push_back(arr[i]);
+		}
+	}
 
 	void insert(T d) {
 		data.push_back(d);
@@ -30,7 +37,7 @@ public:
 	void heapifyDown(int i) {
 		int size = data.size();
 		int largestIndex = i;
-		int value = data[i];
+		T value = data[i];
 		do {
 			if (largestIndex != i) {
 				data[i] = data[largestIndex];
@@ -38,10 +45,10 @@ public:
 				i = largestIndex;
 			}
 			int leftChildIndex = leftChildIndexOf(i);
-			if (leftChildIndex < size && data[leftChildIndex] > data[i]) largestIndex = leftChildIndex;
+			if (leftChildIndex < size && data[leftChildIndex] > data[largestIndex]) largestIndex = leftChildIndex;
 
 			int rightChildIndex = rightChildIndexOf(i);
-			if (rightChildIndex < size && data[rightChildIndex] > data[i]) largestIndex = rightChildIndex;
+			if (rightChildIndex < size && data[rightChildIndex] > data[largestIndex]) largestIndex = rightChildIndex;
 		} while (largestIndex != i);
 
 	}
@@ -50,10 +57,11 @@ public:
 		if (data.size() == 0) return;
 
 		data.erase(data.begin());
-		data.insert(data.begin(), data[data.size() - 1]);
-		data.erase(data.end() - 1);
-
-		heapifyDown(0);
+		if (data.size() > 0) {
+			data.insert(data.begin(), data[data.size() - 1]);
+			data.erase(data.end() - 1);
+			heapifyDown(0);
+		}
 	}
 
 	void print() {

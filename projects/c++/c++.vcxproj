@@ -152,17 +152,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\algorithms\c++\binarySearch.cpp" />
-    <ClCompile Include="..\..\algorithms\c++\bubbleSort.cpp" />
-    <ClCompile Include="..\..\algorithms\c++\insertionSort.cpp" />
-    <ClCompile Include="..\..\algorithms\c++\quickSort.cpp" />
-    <ClCompile Include="breadthFirstSearch.cpp" />
     <ClCompile Include="c++.cpp" />
-    <ClCompile Include="depthFirstSearch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\algorithms\c++\binarySearch.h" />
+    <ClInclude Include="..\..\algorithms\c++\breadthFirstSearch.h" />
     <ClInclude Include="..\..\algorithms\c++\bubbleSort.h" />
+    <ClInclude Include="..\..\algorithms\c++\depthFirstSearch.h" />
+    <ClInclude Include="..\..\algorithms\c++\heapSort.h" />
     <ClInclude Include="..\..\algorithms\c++\insertionSort.h" />
     <ClInclude Include="..\..\algorithms\c++\quickSort.h" />
     <ClInclude Include="..\..\data structures\c++\BinarySearchTree.h" />
@@ -173,8 +170,6 @@
     <ClInclude Include="..\..\data structures\c++\MaxHeapArray.h" />
     <ClInclude Include="..\..\data structures\c++\MinHeapArray.h" />
     <ClInclude Include="..\..\data structures\c++\RedBlackTree.h" />
-    <ClInclude Include="breadthFirstSearch.h" />
-    <ClInclude Include="depthFirstSearch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

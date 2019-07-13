@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include "Graph.h"
@@ -13,7 +14,7 @@ void _visitNode(Graph graph, int start, bool* visited, std::vector<int>* order) 
 
 std::vector<int> depthFirstSearch(Graph graph, int start) {
 	std::list<int>* adjacencies = graph.adjacencies;
-	bool *visited = new bool[graph.length];
+	bool* visited = new bool[graph.length];
 	for (int i = 0; i < graph.length; ++i) {
 		visited[i] = false;
 	}
@@ -22,4 +23,3 @@ std::vector<int> depthFirstSearch(Graph graph, int start) {
 	_visitNode(graph, start, visited, &order);
 	return order;
 }
-

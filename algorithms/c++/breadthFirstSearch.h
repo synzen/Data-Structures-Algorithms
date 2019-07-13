@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include <queue>
 #include "Graph.h"
@@ -9,10 +10,10 @@ std::vector<int> breadthFirstSearch(Graph graph, int start) {
 	}
 
 	std::vector<int> order;
-	
+
 	std::queue<int> toVisit;
 	toVisit.push(start);
-	
+
 	while (toVisit.size() > 0) {
 		int currentVertex = toVisit.front();
 		visited[currentVertex] = true;

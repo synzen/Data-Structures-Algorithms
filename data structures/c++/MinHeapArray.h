@@ -7,6 +7,12 @@ class MinHeap {
 public:
 	std::vector<T> data;
 
+	Min<T>(T arr[], int len) {
+		for (int i = 0; i < len; ++i) {
+			data.push_back(arr[i]);
+		}
+	}
+
 	void insert(T d) {
 		data.push_back(d);
 		int size = data.size();
@@ -31,7 +37,7 @@ public:
 	void heapifyDown(int i) {
 		int size = data.size();
 		int smallestIndex = i;
-		int value = data[i];
+		T value = data[i];
 		do {
 			if (smallestIndex != i) {
 				data[i] = data[smallestIndex];
@@ -39,10 +45,10 @@ public:
 				i = smallestIndex;
 			}
 			int leftChildIndex = leftChildIndexOf(i);
-			if (leftChildIndex < size && data[leftChildIndex] < data[i]) smallestIndex = leftChildIndex;
+			if (leftChildIndex < size && data[leftChildIndex] < data[smallestIndex]) smallestIndex = leftChildIndex;
 
 			int rightChildIndex = rightChildIndexOf(i);
-			if (rightChildIndex < size && data[rightChildIndex] < data[i]) smallestIndex = rightChildIndex;
+			if (rightChildIndex < size && data[rightChildIndex] < data[smallestIndex]) smallestIndex = rightChildIndex;
 		} while (smallestIndex != i);
 
 	}
